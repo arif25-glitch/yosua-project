@@ -10,7 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <title>Document</title>
 
-  <script>
+  <script>  
     function smoothScroll(id) {
       document.getElementById(id).scrollIntoView()
     }
@@ -19,16 +19,18 @@
 
 <body>
   <div class="background-image"></div>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom border-primar">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="navbar-brand" href="#">
+          <img src="./Images/icon.png" alt="icon" style="width: 75px; height: 75;">
+        </a>
+        <button class="navbar-toggler" id="navbar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse offcanvas-collapse" id="navbarNav">
         <ul class="navbar-nav m-auto">
           <li class="nav-item d-flex align-items-centers">
-            <img src="./Images/icon.png" alt="no image" style="width: 50px; height: 50px;">
+            <img src="./Images/icon.png" alt="icon" style="width: 50px; height: 50px;" class="icon-on-desktop">
           </li>
           <li class="nav-item d-flex align-items-center">
             <a class="nav-link" style="color: #064282;" onclick="smoothScroll('layanan_kami')">Services</a>
@@ -308,6 +310,11 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.querySelector('.navbar-toggler').addEventListener('click', function() {
+      document.querySelector('.offcanvas-collapse').classList.toggle('open');
+    });
+  </script>
 </body>
 
 </html>
