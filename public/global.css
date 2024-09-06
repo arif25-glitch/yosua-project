@@ -58,6 +58,14 @@
         transform: translateX(100%);
         
     }
+    .footer-child {
+        margin-top: 10px;
+        margin-bottom: 10px
+    }
+    .footer-parent {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
     .navbar-brand {
         position: absolute;
         left: 50%;
